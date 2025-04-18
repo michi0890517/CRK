@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -78,9 +79,24 @@
     display: inline-block;
     margin-top: 1rem;
   }
+  #music-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    background-color: #39ff14;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px #39ff14;
+  }
 </style>
 </head>
 <body>
+  <button id="music-button" onclick="document.getElementById('bgm').play()">🎵 音楽を再生</button>
   <header>
     <h1>🎮 CSKサーバーへようこそ！</h1>
   </header>
@@ -130,10 +146,9 @@
     <p>詳細はDiscord参加後に案内します！</p>
   </section>
   
-  <audio id="bgm" autoplay loop controls>
+  <audio id="bgm" loop>
     <source src="https://michi0890517.github.io/CRK/rizzlas-c418-224649.mp3" type="audio/mpeg">
     お使いのブラウザは audio タグをサポートしていません。
   </audio>
 </body>
 </html>
-
