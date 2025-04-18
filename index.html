@@ -129,8 +129,12 @@
     <p>参加費500円のお支払いは <strong>PayPay のみ</strong> に対応しています。</p>
     <p>詳細はDiscord参加後に案内します！</p>
   </section>
-  <audio autoplay loop>
+  <div class="center">
+    <button onclick="document.getElementById('bgm').play()" style="margin: 1rem auto; padding: 0.75rem 1.5rem; background-color: #39ff14; color: #000; font-weight: bold; border: none; border-radius: 6px; cursor: pointer; box-shadow: 0 0 8px #39ff14;">🎵 音楽を再生</button>
+  </div>
+  <audio id="bgm" loop>
     <source src="/mnt/data/rizzlas-c418-224649.mp3" type="audio/mpeg">
+    お使いのブラウザは audio タグをサポートしていません。
   </audio>
 </body>
 </html>
