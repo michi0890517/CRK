@@ -6,9 +6,11 @@
   <title>CSKサーバー紹介</title>
   <style>
     body {
-      background-image: url('https://i.imgur.com/JChzJXG.png'), linear-gradient(to bottom, #3a5f0b 15%, #5b3a1a);
+      background-image: url('https://i.imgur.com/JChzJXG.png'), linear-gradient(to bottom, #3a5f0b 15%, #5b3a1a); /* 草と土にブロック感テクスチャ */
       background-size: cover, 64px 64px;
       background-blend-mode: normal;
+      background-image: linear-gradient(to bottom, #3a5f0b 15%, #5b3a1a); /* 上が草ブロック、下が土っぽい */
+      
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-position: center;
@@ -50,76 +52,76 @@
       font-size: 1rem;
       line-height: 1.6;
     }
+    .cta a {
+  background-color: #ffeb3b;
+  color: #333;
+  padding: 1rem 2.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #ffeb3b;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.cta a:hover {
+  transform: scale(1.05);
+  background-color: #fdd835;
+}
     .center {
       text-align: center;
     }
     .cta-box {
-      background-color: rgba(0, 0, 0, 0.3);
-      padding: 1.5rem;
-      border-radius: 10px;
-      display: inline-block;
-      margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+  #music-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    background-color: #39ff14;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 8px #39ff14;
+  }
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 1.5rem;
     }
-    .cta-box a {
-      background-color: #5865F2;
-      color: white;
-      padding: 1rem 2.5rem;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-      font-size: 1.1rem;
-      display: inline-block;
-      box-shadow: 0 0 12px #5865F2;
-      transition: transform 0.2s ease, background-color 0.3s ease;
+    .section {
+      padding: 1.5rem 1rem;
     }
-    .cta-box a:hover {
-      transform: scale(1.05);
-      background-color: #4752C4;
+    .section h2 {
+      font-size: 1.2rem;
+    }
+    .section p, .section ul {
+      font-size: 0.95rem;
     }
     #music-button {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 1000;
-      background-color: #39ff14;
-      color: #000;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 0 8px #39ff14;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
     }
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-      .section {
-        padding: 1.5rem 1rem;
-      }
-      .section h2 {
-        font-size: 1.2rem;
-      }
-      .section p, .section ul {
-        font-size: 0.95rem;
-      }
-      #music-button {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.9rem;
-      }
-      .cta-box a {
-        padding: 0.75rem 1.5rem;
-        font-size: 1rem;
-      }
-      .section h2 img {
-        width: 24px;
-        height: 24px;
-      }
-      input[type="range"] {
-        width: 120px;
-      }
+    .cta a {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
     }
-  </style>
+    .section h2 img {
+      width: 24px;
+      height: 24px;
+    }
+    input[type="range"] {
+      width: 120px;
+    }
+  }
+</style>
 </head>
 <body>
   <button id="music-button" onclick="document.getElementById('bgm').play()">🎵 音楽を再生</button>
@@ -140,26 +142,26 @@
   </section>
 
   <section class="section">
-    <h2><img src="https://static.thenounproject.com/png/3114907-200.png" alt="sword"> プレイ内容 - スリル</h2>
-    <p>サバイバル × 戦闘重視のスリル</p>
-  </section>
+  <h2><img src="https://static.thenounproject.com/png/3114907-200.png" alt="sword"> プレイ内容 - スリル</h2>
+  <p>サバイバル × 戦闘重視のスリル</p>
+</section>
 
-  <section class="section">
-    <h2><img src="https://static.thenounproject.com/png/964026-200.png" alt="shield"> 拠点防衛</h2>
-    <p>PvE拠点防衛型（悪魔の襲撃あり）</p>
-  </section>
+<section class="section">
+  <h2><img src="https://static.thenounproject.com/png/964026-200.png" alt="shield"> 拠点防衛</h2>
+  <p>PvE拠点防衛型（悪魔の襲撃あり）</p>
+</section>
 
-  <section class="section">
-    <h2><img src="https://static.thenounproject.com/png/2938263-200.png" alt="build"> 建築と発展</h2>
-    <p>自由建築＋町づくり要素</p>
-  </section>
+<section class="section">
+  <h2><img src="https://static.thenounproject.com/png/2938263-200.png" alt="build"> 建築と発展</h2>
+  <p>自由建築＋町づくり要素</p>
+</section>
 
-  <section class="section">
-    <h2><img src="https://static.thenounproject.com/png/2341581-200.png" alt="team"> 協力プレイ</h2>
-    <p>仲間と協力して戦い、生き残ろう！</p>
-  </section>
+<section class="section">
+  <h2><img src="https://static.thenounproject.com/png/2341581-200.png" alt="team"> 協力プレイ</h2>
+  <p>仲間と協力して戦い、生き残ろう！</p>
+</section>
 
-  <section class="section center">
+   <section class="section center">
     <h2>🎤 参加しよーぜ？</h2>
     <p>まずはDiscordで仲間になろう！（参加費500円）</p>
     <div class="cta-box">
@@ -172,13 +174,14 @@
     <p>参加費500円のお支払いは <strong>PayPay のみ</strong> に対応しています。</p>
     <p>詳細はDiscord参加後に案内します！</p>
   </section>
-
+  
   <audio id="bgm" autoplay loop volume="0.5">
     <source src="https://michi0890517.github.io/CRK/rizzlas-c418-224649.mp3" type="audio/mpeg">
     お使いのブラウザは audio タグをサポートしていません。
   </audio>
-  <div style="position: fixed; top: 4rem; right: 1rem; z-index: 1000; background: rgba(0,0,0,0.5); padding: 0.5rem; border-radius: 6px;">
-    <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5" oninput="document.getElementById('bgm').volume = this.value">
-  </div>
+<button id="music-button" onclick="document.getElementById('bgm').play()">🎵 音楽を再生</button>
+<div style="position: fixed; top: 4rem; right: 1rem; z-index: 1000; background: rgba(0,0,0,0.5); padding: 0.5rem; border-radius: 6px;">
+  <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5" oninput="document.getElementById('bgm').volume = this.value">
+</div>
 </body>
 </html>
